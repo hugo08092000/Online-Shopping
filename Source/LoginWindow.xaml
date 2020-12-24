@@ -18,7 +18,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         
@@ -26,28 +26,29 @@
         <StackPanel HorizontalAlignment="Center"
                     Grid.Row="1"
                     Grid.Column="1">
-            <TextBlock FontSize="8"></TextBlock>
-            <TextBlock>Đăng nhập</TextBlock>
-            <Image Source="Images/logo.png"
-               RenderOptions.BitmapScalingMode="HighQuality"
-               Height="100"></Image>
+            <TextBlock FontSize="40"></TextBlock>
+            <TextBlock FontSize="20"
+                       HorizontalAlignment="Center">Đăng nhập</TextBlock>
+            <TextBlock FontSize="40"></TextBlock>
             <StackPanel>
                 <TextBlock>Tên đăng nhập:</TextBlock>
                 <TextBox  Width="250"></TextBox>
             </StackPanel>
+            <TextBlock FontSize="8"></TextBlock>
             <StackPanel>
                 <TextBlock>Mật khẩu</TextBlock>
                 <PasswordBox Width="250"></PasswordBox>
             </StackPanel>
             <TextBlock FontSize="8"></TextBlock>
             <Button Style="{StaticResource ButtonPrimary}"
-                    hc:BorderElement.CornerRadius="11">Đăng nhập</Button>
+                    hc:BorderElement.CornerRadius="15">Đăng nhập</Button>
         </StackPanel>
 
-        <TextBlock Grid.Row="2"
-                   Grid.Column="1"
-                   VerticalAlignment="Bottom"
-                   HorizontalAlignment="Center">Đăng ký tài khoản</TextBlock>
+        <Button Grid.Row="2"
+                Grid.Column="1"
+                Style="{StaticResource ButtonDashed}"
+                VerticalAlignment="Bottom"
+                hc:BorderElement.CornerRadius="15">Đăng ký tài khoản</Button>
     </Grid>
     
 </Window>
