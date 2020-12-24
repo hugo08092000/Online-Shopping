@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4608d27f8fb7488098b75e08baa8c5c6" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="TIKIModel.ChiTietHangHoa_DienTu" Width="1.5" PointX="7.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.ChiTietHangHoa_Sach" Width="1.5" PointX="7.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.DanhMuc" Width="1.5" PointX="0.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.DonDatHang" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.DonGiaoHang" Width="1.5" PointX="10.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.Feedback" Width="1.5" PointX="10.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.HangHoa" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.KhachHang" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.Kho" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.LichSuNhapKho" Width="1.5" PointX="10.5" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.LichSuXuatKho" Width="1.5" PointX="13.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.LoaiHang" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.NhanVien_GiaoHang" Width="1.5" PointX="8.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.NhanVien_VanPhong" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.NhaPhanPhoi" Width="1.5" PointX="10.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.SoDiaChi" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.TaiKhoan" Width="1.5" PointX="1.5" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.ThongTinDatHang" Width="1.5" PointX="7.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TIKIModel.ThongTinHangTon" Width="1.5" PointX="7.5" PointY="16.25" IsExpanded="true" />
+        <AssociationConnector Association="TIKIModel.FK_CTHHDT_HH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_CTHHS_HH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_LH_DM" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_DDH_SDC" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_DGH_DDH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_LSXK_DDH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_TTDT_DDH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_DGH_NVGH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_Fb_HH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_Fb_KH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_HH_LH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_LSNK_HH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_TTDT_HH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_TTHT_HH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_KH_TK" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_SDC_KH" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_K_NVVP" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_LSNK_K" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_LSXK_K" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_TTHT_K" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_LSXK_NPP" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.FK_NPP_TK" ManuallyRouted="false" />
+        <AssociationConnector Association="TIKIModel.ThongTinCungCap" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
