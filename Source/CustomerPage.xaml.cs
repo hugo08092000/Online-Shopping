@@ -33,6 +33,7 @@ namespace Online_Shopping
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
             CustomerDataGrid.ItemsSource = OnlineShoppingBUS.HangHoaBUS.Instance.GetAll().ToList();
+            //OrderDataGrid.ItemsSource = OnlineShoppingBUS.HangHoaBUS.Instance.GetAll().ToList();
         }
     }
 }
