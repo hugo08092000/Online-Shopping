@@ -7,10 +7,21 @@
         xmlns:local="clr-namespace:Online_Shopping"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded" WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
     <Grid>
-        <DataGrid x:Name="Main">
-            
-        </DataGrid>
+        <TabControl Margin="10"
+                    Style="{StaticResource TabControlCapsule}">
+            <TabItem Header="Người mua">
+                <Frame x:Name="CustomerFrame"
+                       NavigationUIVisibility="Hidden"
+                       Loaded="CustomerFrame_Loaded"></Frame>
+            </TabItem>
+            <TabItem Header="Người bán">
+                <Frame x:Name="SellerFrame"
+                       NavigationUIVisibility="Hidden"
+                       Loaded="SellerFrame_Loaded"></Frame>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

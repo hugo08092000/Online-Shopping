@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using OnlineShoppingBUS;
 
 namespace Online_Shopping
 {
@@ -22,6 +23,58 @@ namespace Online_Shopping
         public LoginWindow()
         {
             InitializeComponent();
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            if((UsernameTextBox.Text == "") || (PasswordTextBox.Password == ""))
+            {
+
+            }
+            else
+            {
+                string username = UsernameTextBox.Text;
+                string password = PasswordTextBox.Password;
+
+                if (TaiKhoanBUS.Instance.CheckLogin(username, password))
+                {
+                    MessageBox.Show("Đăng nhập thành công!");
+                    MainWindow main = new MainWindow();
+                    this.Close();
+                    main.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thất bại!");
+                }
+            }
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            if ((UsernameTextBox.Text == "") || (PasswordTextBox.Password == ""))
+            {
+
+            }
+            else
+            {
+                string username = UsernameTextBox.Text;
+                string password = PasswordTextBox.Password;
+
+                if (TaiKhoanBUS.Instance.CheckUsername(username))
+                {
+                    TaiKhoanBUS.Instance.AddAccount(username, password);
+                    MessageBox.Show("Đăng kí thành công!");
+
+                    MainWindow main = new MainWindow();
+                    this.Close();
+                    main.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Đã tồn tại tài khoản!");
+                }
+            }
         }
     }
 }

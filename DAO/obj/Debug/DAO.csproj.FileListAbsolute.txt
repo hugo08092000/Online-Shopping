@@ -1,0 +1,3 @@
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\DAO\obj\Debug\DAO.Properties.Resources.resources
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache

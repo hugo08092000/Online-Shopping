@@ -18,11 +18,10 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-        
-        
+
+
         <StackPanel HorizontalAlignment="Center"
                     Grid.Row="1"
                     Grid.Column="1">
@@ -30,25 +29,37 @@
             <TextBlock FontSize="20"
                        HorizontalAlignment="Center">Đăng nhập</TextBlock>
             <TextBlock FontSize="40"></TextBlock>
+
             <StackPanel>
                 <TextBlock>Tên đăng nhập:</TextBlock>
-                <TextBox  Width="250"></TextBox>
+                <TextBox x:Name="UsernameTextBox" Width="250"></TextBox>
             </StackPanel>
             <TextBlock FontSize="8"></TextBlock>
             <StackPanel>
                 <TextBlock>Mật khẩu</TextBlock>
-                <PasswordBox Width="250"></PasswordBox>
+                <PasswordBox x:Name="PasswordTextBox" Width="250"></PasswordBox>
             </StackPanel>
-            <TextBlock FontSize="8"></TextBlock>
-            <Button Style="{StaticResource ButtonPrimary}"
-                    hc:BorderElement.CornerRadius="15">Đăng nhập</Button>
-        </StackPanel>
 
-        <Button Grid.Row="2"
-                Grid.Column="1"
-                Style="{StaticResource ButtonDashed}"
-                VerticalAlignment="Bottom"
-                hc:BorderElement.CornerRadius="15">Đăng ký tài khoản</Button>
+            <TextBlock FontSize="8"></TextBlock>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Button x:Name="RegisterButton" 
+                        Style="{StaticResource ButtonDashed}"
+                        hc:BorderElement.CornerRadius="15"
+                        Click="RegisterButton_Click"
+                        Width="100">Đăng ký</Button>
+                
+                <TextBlock Text="   "/>
+
+                <Button x:Name="LoginButton" 
+                        Style="{StaticResource ButtonPrimary}"
+                        hc:BorderElement.CornerRadius="15"
+                        Click="LoginButton_Click"
+                        Width="100">Đăng nhập</Button>
+
+            </StackPanel>
+
+        </StackPanel>
     </Grid>
     
 </Window>

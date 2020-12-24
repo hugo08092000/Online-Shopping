@@ -27,8 +27,18 @@ namespace Online_Shopping
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            TIKIEntities db = new TIKIEntities();
-            Main.ItemsSource = db.DanhMucs.ToList();
+            
+        }
+
+        private void CustomerFrame_Loaded(object sender, RoutedEventArgs e)
+        {
+            CustomerPage customerPage = new CustomerPage();
+            CustomerFrame.Navigate(customerPage);
+        }
+
+        private void SellerFrame_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
