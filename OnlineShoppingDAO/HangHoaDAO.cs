@@ -37,5 +37,30 @@ namespace OnlineShoppingDAO
 
             return db;
         }
+
+        public DataTable GetBasketID()
+        {
+            DataTable result = new DataTable();
+
+            string query = "select MaDon from DonDatHang where NgayLapDon = NULL";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+            adapter.Fill(result);
+
+            return result;
+        }
+
+        public DataTable GetProduct(int id)
+        {
+            DataTable db = new DataTable();
+
+            string query = $"select * from HangHoa HH, LoaiHang LH, DanhMuc DM, ThongTinHangTon T where HH.MaLoaiHang = LH.MaLoaiHang " +
+                $"and LH.MaDanhMuc = DM.MaDanhMuc and T.MaHangHoa = HH.MaHangHoa and HH.MaHangHoa = {id}";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+            adapter.Fill(db);
+
+            return db;
+        }
     }
 }

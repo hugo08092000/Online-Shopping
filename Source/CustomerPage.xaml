@@ -14,14 +14,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="5"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
             <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
 
@@ -44,12 +44,7 @@
         <StackPanel Orientation="Horizontal" 
                     HorizontalAlignment="Right"
                     Grid.Row="1"
-                    Grid.Column="2">           
-            <Button Content="Thêm vào giỏ"
-                    Name="AddButton"
-                    Width="100"
-                    Style="{StaticResource ButtonPrimary}"
-                    hc:BorderElement.CornerRadius="15"/>
+                    Grid.Column="2">     
             <TextBlock Text=" "/>
             <Button Content="Refresh"
                     Name="RefreshButton"
@@ -64,7 +59,7 @@
                    Grid.Column="1"
                    Panel.ZIndex="2"
                    VerticalAlignment="Bottom"
-                   FontSize="20"
+                   FontSize="30"
                    FontWeight="Bold"
                    Margin="15 0 0 15"
                    IsHitTestVisible="False"
@@ -75,9 +70,9 @@
                 CornerRadius="15"
                 Grid.Row="2"
                 Grid.Column="1"
+                Grid.ColumnSpan="2"
                 Margin="0 10 0 0"
-                Padding="8"
-                Grid.ColumnSpan="2">
+                Padding="8">
             <DataGrid x:Name="CustomerDataGrid"
                       AutoGenerateColumns="False"
                       IsReadOnly="True">
@@ -97,51 +92,56 @@
                 </DataGrid.Columns>
 
             </DataGrid>
-
-
-
         </Border>
 
-        <TextBlock Text="Giỏ hàng"
-                   Grid.Row="3"
-                   Grid.Column="1"
-                   Panel.ZIndex="2"
-                   VerticalAlignment="Bottom"
-                   FontSize="20"
-                   FontWeight="Bold"
-                   Margin="15 0 0 15"
-                   IsHitTestVisible="False"
-                   Foreground="Blue"/>
-        <Border x:Name="OrderDataGridBorder"
-                BorderBrush="Blue"
-                BorderThickness="0.5"
-                CornerRadius="15"
-                Grid.Row="3"
-                Grid.Column="1"
-                Margin="0 5 0 0"
-                Padding="8">
+        <StackPanel Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <TextBlock Text="Số lượng: "
+                       FontSize="15"
+                       VerticalAlignment="Center"/>
+            <TextBox x:Name="AmountTextBox"
+                     Width="50"
+                     HorizontalContentAlignment="Center"/>
+            <TextBlock Text=" "/>
+            <Button Content="Thêm vào giỏ"
+                    Name="AddButton"
+                    Width="100"
+                    Height="30"
+                    Style="{StaticResource ButtonPrimary}"
+                    hc:BorderElement.CornerRadius="15"
+                    Click="AddButton_Click"/>
+            <TextBlock Text=" "/>
+            <Grid>
+                <Border x:Name="AmountBorder" 
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Height="16"
+                        Width="16"
+                        Margin="-91 -18 0 0"
+                        Background="Red"
+                        CornerRadius="50"
+                        Panel.ZIndex="2"
+                        Visibility="Collapsed">
+                    <TextBlock x:Name="Amount"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="8"/>
+                </Border>
+                <Button Content="Xem giỏ hàng"
+                    Name="BasketButton"
+                    Width="100"
+                    Height="30"
+                    Style="{StaticResource ButtonPrimary}"
+                    hc:BorderElement.CornerRadius="15" 
+                    Click="BasketButton_Click"/>
+            </Grid>
             
-            <DataGrid x:Name="OrderDataGrid"
-                      AutoGenerateColumns="False"
-                      IsReadOnly="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Sản phẩm"
-                                        Width="*"
-                                        Binding="{Binding TenHangHoa}"/>
-                    <DataGridTextColumn Header="Loại hàng"
-                                        Width="*"
-                                        Binding="{Binding TenLoaiHang}"/>
-                    <DataGridTextColumn Header="Danh mục"
-                                        Width="*"
-                                        Binding="{Binding TenDanhMuc}"/>
-                    <DataGridTextColumn Header="Đơn giá"
-                                        Width="*"
-                                        Binding="{Binding DonGia}"/>
-                </DataGrid.Columns>
-
-            </DataGrid>
-           
-        </Border>
-
+        </StackPanel>
+        
     </Grid>
 </Page>

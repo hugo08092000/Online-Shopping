@@ -45,6 +45,50 @@ namespace OnlineShoppingBUS
 
             return result;
         }
+
+        public int GetBasketID()
+        {
+            int result = 0;
+            DataTable db = OnlineShoppingDAO.HangHoaDAO.Instance.GetBasketID();
+            DataRow row = db.Rows[0];
+
+            string tmpID = row["MaDon"].ToString();
+            if(tmpID == "")
+            {
+                return -1;
+            }
+            else
+            {
+                result = int.Parse(tmpID);
+            }
+
+            return result;
+        }
+
+        public List<ProductInBasket> AddProductToBasket(int maHangHoa, int maDonHang, int soLuongDat)
+        {
+            List<ProductInBasket> result = new List<ProductInBasket>();
+
+            return result;
+        }
+
+        public Product GetProduct(int id)
+        {
+            Product result = new Product();
+
+            DataTable db;
+            db = OnlineShoppingDAO.HangHoaDAO.Instance.GetProduct(id);
+
+            DataRow row = db.Rows[0];
+
+            result.MaHangHoa = int.Parse(row["MaHangHoa"].ToString());
+            result.DonGia = float.Parse(row["DonGia"].ToString());
+            result.TenLoaiHang = row["TenLoaiHang"].ToString();
+            result.TenHangHoa = row["TenHangHoa"].ToString();
+            result.TenDanhMuc = row["TenDanhMuc"].ToString();
+
+            return result;
+        }
     }
 
 
@@ -63,5 +107,22 @@ namespace OnlineShoppingBUS
         public string TenLoaiHang { get => _tenLoaiHang; set => _tenLoaiHang = value; }
         public string TenDanhMuc { get => _tenDanhMuc; set => _tenDanhMuc = value; }
         public int SoLuongTon { get => _soLuongTon; set => _soLuongTon = value; }
+    }
+
+    public class ProductInBasket
+    {
+        private int _maHangHoa;
+        private float _donGia;
+        private string _tenHangHoa;
+        private int _maDonHang;
+        private int _soLuongDat;
+        private float _tongTien;
+
+        public int MaHangHoa { set => _maHangHoa = value; get => _maHangHoa; }
+        public float DonGia { set => _donGia = value; get => _donGia; }
+        public int MaDonHang { get => _maDonHang; set => _maDonHang = value; }
+        public string TenHangHoa { get => _tenHangHoa; set => _tenHangHoa = value; }
+        public int SoLuongDat { get => _soLuongDat; set => _soLuongDat = value; }
+        public float TongTien { get => _tongTien; set => _tongTien = value; }
     }
 }
