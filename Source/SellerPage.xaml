@@ -1,0 +1,130 @@
+﻿<Page x:Class="Online_Shopping.SellerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Online_Shopping"
+      xmlns:hc="https://handyorg.github.io/handycontrol"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SellerPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid HorizontalAlignment="Stretch"
+              Grid.Row="1"
+              Grid.Column="1">
+            <TextBox x:Name="SearchTextBox"
+                     hc:BorderElement.CornerRadius="15"
+                     Height="25"
+                     VerticalContentAlignment="Center"></TextBox>
+            <Button Content="Tìm kiếm"
+                    Name="SearchButton"
+                    Width="100"
+                    Height="30"
+                    Style="{StaticResource ButtonPrimary}"
+                    hc:BorderElement.CornerRadius="15"
+                    HorizontalAlignment="Right"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Right"
+                    Grid.Row="1"
+                    Grid.Column="2">
+            <TextBlock Text=" "/>
+            <Button Content="Refresh"
+                    Name="RefreshButton"
+                    Width="100"
+                    Style="{StaticResource ButtonPrimary}"
+                    hc:BorderElement.CornerRadius="15"
+                    Click="RefreshButton_Click"/>
+        </StackPanel>
+
+        <TextBlock Text="Danh sách sản phẩm đăng bán"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Panel.ZIndex="2"
+                   VerticalAlignment="Bottom"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Margin="15 0 0 15"
+                   IsHitTestVisible="False"
+                   Foreground="Blue"/>
+        <Border x:Name="ListDataGridBorder"
+                BorderBrush="Blue"
+                BorderThickness="0.5"
+                CornerRadius="15"
+                Grid.Row="2"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Margin="0 10 0 0"
+                Padding="8">
+            <DataGrid x:Name="CustomerDataGrid"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Sản phẩm"
+                                        Width="*"
+                                        Binding="{Binding TenHangHoa}"/>
+                    <DataGridTextColumn Header="Loại hàng"
+                                        Width="*"
+                                        Binding="{Binding TenLoaiHang}"/>
+                    <DataGridTextColumn Header="Danh mục"
+                                        Width="*"
+                                        Binding="{Binding TenDanhMuc}"/>
+                    <DataGridTextColumn Header="Đơn giá"
+                                        Width="*"
+                                        Binding="{Binding DonGia}"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </Border>
+
+        <StackPanel Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <Grid>
+                <Border x:Name="AmountBorder" 
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Height="16"
+                        Width="16"
+                        Margin="-91 -18 0 0"
+                        Background="Red"
+                        CornerRadius="50"
+                        Panel.ZIndex="2"
+                        Visibility="Collapsed">
+                    <TextBlock x:Name="Amount"
+                               Foreground="White"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontSize="8"/>
+                </Border>
+                <Button Content="Thêm sản phẩm"
+                    Name="AddButton"
+                    Width="125"
+                    Height="30"
+                    Style="{StaticResource ButtonPrimary}"
+                    hc:BorderElement.CornerRadius="15" 
+                    Click="Add_Click"/>
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</Page>
