@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\Source\obj\Debug\
+D:\DOANTH2 CSDLNC\Online-Shopping\Source\obj\Debug\
 Online_Shopping
 none
 false
 DEBUG;TRACE
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\Source\App.xaml
-41276101272
+D:\DOANTH2 CSDLNC\Online-Shopping\Source\App.xaml
+6-1616905629
 
-9-1533660850
-20-1146493854
-BasketWindow.xaml;CustomerPage.xaml;LoginWindow.xaml;MainWindow.xaml;
+11-1579949026
+201970580910
+AddProductWindow.xaml;BasketWindow.xaml;CustomerPage.xaml;LoginWindow.xaml;MainWindow.xaml;SellerPage.xaml;
 
-True
+False
 
