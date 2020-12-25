@@ -38,6 +38,18 @@ namespace OnlineShoppingDAO
             return db;
         }
 
+        public DataTable GetNumberOfProducts()
+        {
+            DataTable db = new DataTable();
+
+            string query = "select count(*) as Amount from HangHoa";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+            adapter.Fill(db);           
+
+            return db;
+        }
+
         public DataTable GetBasketID()
         {
             DataTable result = new DataTable();
@@ -61,6 +73,40 @@ namespace OnlineShoppingDAO
             adapter.Fill(db);
 
             return db;
+        }
+
+        public DataTable GetProductOfSeller()
+        {
+            DataTable db = new DataTable();
+
+            string query = $"select * from HangHoa HH, DanhMuc DM, LoaiHang LH, ThongTinCungCap CC where HH.MaHangHoa = CC.MaHangHoa " +
+                $"and CC.MaDonVi = 1 and HH.MaLoaiHang = LH.MaLoaiHang and LH.MaDanhMuc = DM.MaDanhMuc";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+            adapter.Fill(db);
+
+            return db;
+        }
+
+        public void AddProduct(int maHangHoa, string tenHangHoa, float giaHangHoa, int loaiHangHoa)
+        {
+            string query = $"insert into HangHoa(MaHangHoa, TenHangHoa, MaLoaiHang, DonGia) values ({maHangHoa}, N'{tenHangHoa}', {loaiHangHoa}, {giaHangHoa})";
+
+            _conn.Open();
+            SqlCommand cmd = new SqlCommand(query, _conn);
+            cmd.ExecuteNonQuery();
+            _conn.Close();
+            
+        }
+
+        public void AddSupplyInfo(int maHangHoa)
+        {
+            string query = $"insert into ThongTinCungCap(MaDonVi, MaHangHoa) values (1, {maHangHoa})";
+
+            _conn.Open();
+            SqlCommand cmd = new SqlCommand(query, _conn);
+            cmd.ExecuteNonQuery();
+            _conn.Close();
         }
     }
 }

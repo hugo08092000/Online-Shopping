@@ -38,7 +38,8 @@ namespace Online_Shopping
 
         private void SellerFrame_Loaded(object sender, RoutedEventArgs e)
         {
-
+            SellerPage sellerPage = new SellerPage();
+            SellerFrame.Navigate(sellerPage);
         }
     }
 }

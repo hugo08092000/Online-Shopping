@@ -12,7 +12,6 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="30"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="5"/>
@@ -24,37 +23,16 @@
             <ColumnDefinition Width="5"/>
         </Grid.ColumnDefinitions>
 
-        <Grid HorizontalAlignment="Stretch"
-              Grid.Row="1"
-              Grid.Column="1">
-            <TextBox x:Name="SearchTextBox"
-                     hc:BorderElement.CornerRadius="15"
-                     Height="25"
-                     VerticalContentAlignment="Center"></TextBox>
-            <Button Content="Tìm kiếm"
-                    Name="SearchButton"
-                    Width="100"
-                    Height="30"
-                    Style="{StaticResource ButtonPrimary}"
-                    hc:BorderElement.CornerRadius="15"
-                    HorizontalAlignment="Right"/>
-        </Grid>
-
         <StackPanel Orientation="Horizontal" 
                     HorizontalAlignment="Right"
                     Grid.Row="1"
                     Grid.Column="2">
             <TextBlock Text=" "/>
-            <Button Content="Refresh"
-                    Name="RefreshButton"
-                    Width="100"
-                    Style="{StaticResource ButtonPrimary}"
-                    hc:BorderElement.CornerRadius="15"
-                    Click="RefreshButton_Click"/>
+            
         </StackPanel>
 
         <TextBlock Text="Danh sách sản phẩm đăng bán"
-                   Grid.Row="2"
+                   Grid.Row="1"
                    Grid.Column="1"
                    Panel.ZIndex="2"
                    VerticalAlignment="Bottom"
@@ -63,16 +41,17 @@
                    Margin="15 0 0 15"
                    IsHitTestVisible="False"
                    Foreground="Blue"/>
+        
         <Border x:Name="ListDataGridBorder"
                 BorderBrush="Blue"
                 BorderThickness="0.5"
                 CornerRadius="15"
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="1"
                 Grid.ColumnSpan="2"
                 Margin="0 10 0 0"
                 Padding="8">
-            <DataGrid x:Name="CustomerDataGrid"
+            <DataGrid x:Name="SellerDataGrid"
                       AutoGenerateColumns="False"
                       IsReadOnly="True">
                 <DataGrid.Columns>
@@ -93,7 +72,7 @@
             </DataGrid>
         </Border>
 
-        <StackPanel Grid.Row="3"
+        <StackPanel Grid.Row="2"
                     Grid.Column="1"
                     Grid.ColumnSpan="2"
                     VerticalAlignment="Center"
@@ -116,13 +95,25 @@
                                HorizontalAlignment="Center"
                                FontSize="8"/>
                 </Border>
-                <Button Content="Thêm sản phẩm"
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Refresh"
+                    Name="RefreshButton"
+                    Width="100"
+                    Style="{StaticResource ButtonPrimary}"
+                    hc:BorderElement.CornerRadius="15"
+                    Click="RefreshButton_Click"/>
+
+                    <TextBlock Text=" "/>
+
+                    <Button Content="Thêm sản phẩm"
                     Name="AddButton"
                     Width="125"
                     Height="30"
                     Style="{StaticResource ButtonPrimary}"
                     hc:BorderElement.CornerRadius="15" 
                     Click="Add_Click"/>
+                </StackPanel>
+                
             </Grid>
 
         </StackPanel>

@@ -46,6 +46,53 @@ namespace OnlineShoppingBUS
             return result;
         }
 
+        public List<Product> GetProductOfSeller()
+        {
+            DataTable db;
+            db = OnlineShoppingDAO.HangHoaDAO.Instance.GetProductOfSeller();
+
+            List<Product> result = new List<Product>();
+
+            foreach (DataRow row in db.Rows)
+            {
+                Product tmpProduct = new Product();
+                tmpProduct.MaHangHoa = int.Parse(row["MaHangHoa"].ToString());
+                tmpProduct.DonGia = float.Parse(row["DonGia"].ToString());
+                tmpProduct.TenLoaiHang = row["TenLoaiHang"].ToString();
+                tmpProduct.TenHangHoa = row["TenHangHoa"].ToString();
+                tmpProduct.TenDanhMuc = row["TenDanhMuc"].ToString();
+
+                result.Add(tmpProduct);
+            }
+
+            return result;
+        }
+
+        public int GetNumberOfProducts()
+        {
+            DataTable db = new DataTable();
+            int result;
+
+            db = OnlineShoppingDAO.HangHoaDAO.Instance.GetNumberOfProducts();
+
+            DataRow row = db.Rows[0];
+
+            string a = row["Amount"].ToString();
+
+            result = int.Parse(a);
+
+            return result;
+        }
+
+        public void AddProduct(string tenHangHoa, float giaHangHoa, int loaiHangHoa)
+        {
+            int ma = GetNumberOfProducts() + 1;
+
+            OnlineShoppingDAO.HangHoaDAO.Instance.AddProduct(ma, tenHangHoa, giaHangHoa, loaiHangHoa);
+
+            OnlineShoppingDAO.HangHoaDAO.Instance.AddSupplyInfo(ma);
+        }
+
         public int GetBasketID()
         {
             int result = 0;

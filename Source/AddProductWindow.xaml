@@ -5,30 +5,88 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Online_Shopping"
         xmlns:hc="https://handyorg.github.io/handycontrol"
-        mc:Ignorable="d"
-        Title="Đăng bán sản phẩm mới" Height="450" Width="800">
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Đăng bán sản phẩm mới" Height="450" Width="550"
+        ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
-        <Rectangle HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="800" Margin="0,0,0,-0.4" Fill="#FFF4F4F5"/>
-        <Grid HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" VerticalAlignment="Top" Width="780"/>
-        <TextBlock x:Name="TITLE" HorizontalAlignment="Center" Margin="0,15,0,0" TextWrapping="Wrap" Text="THÊM MỚI SẢN PHẨM" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" FontWeight="Bold"/>
-        <TextBlock x:Name="NameProduct" HorizontalAlignment="Left" Margin="40,61,0,0" TextWrapping="Wrap" Text="Tên sản phẩm" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock x:Name="PriceProduct" HorizontalAlignment="Left" Margin="40,138,0,0" TextWrapping="Wrap" Text="Giá sản phẩm" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="36" Margin="40,82,0,0" TextWrapping="Wrap" Text="Mô tả sản phẩm" VerticalAlignment="Top" Width="216" FontSize="16" AcceptsTab="True" FontStyle="Italic" IsReadOnly="True"/>
-        <TextBox x:Name="DescriptionBox" HorizontalAlignment="Left" Height="178" Margin="40,230,0,0" TextWrapping="Wrap" Text="Mô tả sản phẩm" VerticalAlignment="Top" Width="216" FontSize="16" AcceptsTab="True" FontStyle="Italic" IsReadOnly="True"/>
-        <TextBox x:Name="PriceBox" HorizontalAlignment="Left" Height="36" Margin="40,159,0,0" TextWrapping="Wrap" Text="Giá sản phẩm" VerticalAlignment="Top" Width="216" FontSize="16" AcceptsTab="True" FontStyle="Italic" IsReadOnly="True"/>
+        <Rectangle HorizontalAlignment="Left" 
+                   Height="420" 
+                   Stroke="Black" 
+                   VerticalAlignment="Top" 
+                   Width="544" 
+                   Fill="#FFF4F4F5"/>
+
+        <Grid HorizontalAlignment="Left" 
+              Height="51" 
+              Margin="10,10,0,0" 
+              VerticalAlignment="Top" 
+              Width="780"/>
+
+        <TextBlock x:Name="TITLE" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,15,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="THÊM MỚI SẢN PHẨM" 
+                   VerticalAlignment="Top" 
+                   FontFamily="Arial" 
+                   FontSize="20" 
+                   FontWeight="Bold"/>
+        <TextBlock x:Name="NameProduct" 
+                   HorizontalAlignment="Left" 
+                   Margin="40,61,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="Tên sản phẩm" 
+                   VerticalAlignment="Top" 
+                   FontSize="16"/>
+
+        <TextBlock x:Name="PriceProduct" 
+                   HorizontalAlignment="Left" 
+                   Margin="40,138,0,0" 
+                   TextWrapping="Wrap" 
+                   Text="Giá sản phẩm" 
+                   VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="NameBox" 
+                 HorizontalAlignment="Left" 
+                 Height="36" Margin="40,82,0,0" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="216" FontSize="16" 
+                 AcceptsTab="True" FontStyle="Italic"/>
+        <TextBox x:Name="DescriptionBox" 
+                 HorizontalAlignment="Left" Height="169" Margin="40,230,0,0"
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="216" 
+                 FontSize="16" AcceptsTab="True" FontStyle="Italic"/>
+        <TextBox x:Name="PriceBox" 
+                 HorizontalAlignment="Left" Height="36" 
+                 Margin="40,159,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="216" FontSize="16"
+                 FontStyle="Italic" AcceptsTab="True"/>
+
         <TextBlock x:Name="DescriptionProduct" HorizontalAlignment="Left" Margin="41,209,0,0" TextWrapping="Wrap" Text="Mô tả sản phẩm" VerticalAlignment="Top" FontSize="16"/>
-        <Button x:Name="ShowCategoryMenuBtn" Content="+" HorizontalAlignment="Left" Margin="363,82,0,0" VerticalAlignment="Top" Width="30" Click="Button_Click" Background="#FF51EA21" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="404,85,0,0" TextWrapping="Wrap" Text="Loại sản phẩm" VerticalAlignment="Top" Height="23" FontSize="16"/>
-        <Button x:Name="AddImageProduct" Content="+" HorizontalAlignment="Left" Margin="363,200,0,0" VerticalAlignment="Top" Width="30" Click="Button_Click" Background="#FF51EA21" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="404,204,0,0" TextWrapping="Wrap" Text="Ảnh sản phẩm" VerticalAlignment="Top" Height="23" FontSize="16"/>
-        <Image x:Name="ImgProduct" HorizontalAlignment="Left" Height="160" Margin="363,248,0,0" VerticalAlignment="Top" Width="160" OpacityMask="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"/>
-        <TextBlock x:Name="NameProduct_Copy2" HorizontalAlignment="Left" Margin="557,61,0,0" TextWrapping="Wrap" Text="Ngày nhập kho" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="DateBox" HorizontalAlignment="Left" Height="36" Margin="557,82,0,0" TextWrapping="Wrap" Text="Ngày nhập kho" VerticalAlignment="Top" Width="216" FontSize="16" AcceptsTab="True" FontStyle="Italic" IsReadOnly="True"/>
-        <TextBlock x:Name="NameProduct_Copy3" HorizontalAlignment="Left" Margin="557,138,0,0" TextWrapping="Wrap" Text="Số lượng muốn nhập" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="AmountBox" HorizontalAlignment="Left" Height="36" Margin="557,159,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="60" FontSize="16" AcceptsTab="True" FontStyle="Italic" IsReadOnly="True" TextAlignment="Right"/>
-        <hc:SplitButton x:Name="ShowCategoryListBtn" Content="Loại sản phẩm" HorizontalAlignment="Left" Margin="363,137,0,0" VerticalAlignment="Top" Width="143"/>
-        <Button x:Name="RefreshBtn" Content="Làm mới" HorizontalAlignment="Left" Margin="610,248,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click_1" Background="#FF51EA21" FontSize="14"/>
-        <Button x:Name="SaveBtn" Content="Lưu" HorizontalAlignment="Left" Margin="610,306,0,0" VerticalAlignment="Top" Width="117" Click="Button_Click_1" Background="#FF51EA21" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="337,60,0,0" TextWrapping="Wrap" Text="Loại sản phẩm" VerticalAlignment="Top" Height="23" FontSize="16"/>
+
+
+        <TextBlock x:Name="NameProduct_Copy3" HorizontalAlignment="Left" Margin="337,133,0,0" TextWrapping="Wrap" Text="Số lượng muốn nhập" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="AmountBox" 
+                 HorizontalAlignment="Left" 
+                 Height="36" Margin="337,159,0,0" 
+                 TextWrapping="Wrap" Text="0" VerticalAlignment="Top" 
+                 Width="60" FontSize="16" AcceptsTab="True" 
+                 FontStyle="Italic"
+                 TextAlignment="Right" 
+                 RenderTransformOrigin="0.323,0.494"/>
+
+        <hc:ComboBox x:Name="ShowCategoryListBtn"
+                        HorizontalAlignment="Left" 
+                        Margin="337,88,0,0" 
+                        VerticalAlignment="Top" Width="143"/>
+
+        <Button x:Name="SaveBtn" Content="Đăng" HorizontalAlignment="Left" 
+                Margin="363,292,0,0" VerticalAlignment="Top" 
+                Width="100" 
+                Height="30"
+                Click="SaveBtn_Click" FontSize="14"
+                Style="{StaticResource ButtonPrimary}"
+                hc:BorderElement.CornerRadius="15"/>
 
     </Grid>
 </Window>

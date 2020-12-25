@@ -23,5 +23,54 @@ namespace Online_Shopping
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> loaiHang = new List<string>
+            {
+                "Sách",
+                "Điện tử"
+            };
+            ShowCategoryListBtn.ItemsSource = loaiHang;
+            ShowCategoryListBtn.SelectedIndex = 0;
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if((NameBox.Text == "") || (PriceBox.Text == ""))
+            {
+                MessageBox.Show("Chưa nhập đủ!");
+                return;
+            }
+
+            string tenHangHoa = NameBox.Text;
+            float giaHangHoa;
+            int loaiHangHoa;
+
+            string tmp = PriceBox.Text;
+            try
+            {
+                giaHangHoa = float.Parse(tmp);
+            }
+            catch
+            {
+                MessageBox.Show("Giá phải là số!");
+                return;
+            }
+
+            tmp = ShowCategoryListBtn.SelectedItem.ToString();
+            if(tmp == "Sách")
+            {
+                loaiHangHoa = 2;
+            }
+            else
+            {
+                loaiHangHoa = 1;
+            }
+
+            OnlineShoppingBUS.HangHoaBUS.Instance.AddProduct(tenHangHoa, giaHangHoa, loaiHangHoa);
+            this.Close();
+        }
+
     }
 }
