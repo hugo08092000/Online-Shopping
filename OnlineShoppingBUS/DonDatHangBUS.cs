@@ -44,5 +44,9 @@ namespace OnlineShoppingBUS
         {
             OnlineShoppingDAO.DonDatHangDAO.Instance.AddProductToOrder(maDon, maHangHoa, soLuongDat);
         }
+        public DataTable GetHistoryOfOrder(string maKhachHang)
+        {
+            return OnlineShoppingDAO.DonDatHangDAO.Instance.GetHistoryOfOrder(maKhachHang);
+        }
     }
 }

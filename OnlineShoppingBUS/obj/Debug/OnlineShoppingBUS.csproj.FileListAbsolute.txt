@@ -1,0 +1,11 @@
+C:\Online-Shopping\OnlineShoppingBUS\bin\Debug\OnlineShoppingBUS.dll
+C:\Online-Shopping\OnlineShoppingBUS\bin\Debug\OnlineShoppingBUS.pdb
+C:\Online-Shopping\OnlineShoppingBUS\bin\Debug\OnlineShoppingDAO.dll
+C:\Online-Shopping\OnlineShoppingBUS\bin\Debug\OnlineShoppingDAO.pdb
+C:\Online-Shopping\OnlineShoppingBUS\obj\Debug\OnlineShoppingBUS.csprojAssemblyReference.cache
+C:\Online-Shopping\OnlineShoppingBUS\obj\Debug\OnlineShoppingBUS.Properties.Resources.resources
+C:\Online-Shopping\OnlineShoppingBUS\obj\Debug\OnlineShoppingBUS.csproj.GenerateResource.cache
+C:\Online-Shopping\OnlineShoppingBUS\obj\Debug\OnlineShoppingBUS.csproj.CoreCompileInputs.cache
+C:\Online-Shopping\OnlineShoppingBUS\obj\Debug\OnlineShoppingBUS.csproj.CopyComplete
+C:\Online-Shopping\OnlineShoppingBUS\obj\Debug\OnlineShoppingBUS.dll
+C:\Online-Shopping\OnlineShoppingBUS\obj\Debug\OnlineShoppingBUS.pdb

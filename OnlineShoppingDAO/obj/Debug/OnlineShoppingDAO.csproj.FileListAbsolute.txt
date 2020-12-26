@@ -1,0 +1,8 @@
+C:\Online-Shopping\OnlineShoppingDAO\bin\Debug\OnlineShoppingDAO.dll
+C:\Online-Shopping\OnlineShoppingDAO\bin\Debug\OnlineShoppingDAO.pdb
+C:\Online-Shopping\OnlineShoppingDAO\obj\Debug\OnlineShoppingDAO.csprojAssemblyReference.cache
+C:\Online-Shopping\OnlineShoppingDAO\obj\Debug\OnlineShoppingDAO.Properties.Resources.resources
+C:\Online-Shopping\OnlineShoppingDAO\obj\Debug\OnlineShoppingDAO.csproj.GenerateResource.cache
+C:\Online-Shopping\OnlineShoppingDAO\obj\Debug\OnlineShoppingDAO.csproj.CoreCompileInputs.cache
+C:\Online-Shopping\OnlineShoppingDAO\obj\Debug\OnlineShoppingDAO.dll
+C:\Online-Shopping\OnlineShoppingDAO\obj\Debug\OnlineShoppingDAO.pdb

@@ -1,0 +1,31 @@
+﻿<Page x:Class="Online_Shopping.HistoryOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Online_Shopping"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="HistoryOrder">
+
+    <Grid Margin="0,0,-72,-53">
+        <DataGrid x:Name="ddGHistory" ItemsSource="{Binding}" HorizontalAlignment="Left" Height="430" Margin="10,63,0,0" VerticalAlignment="Top" Width="852" HeadersVisibility="Column"/>
+        <TextBlock Text="Lịch sử đơn hàng"
+            Panel.ZIndex="2"
+            VerticalAlignment="Bottom"
+            FontSize="30"
+            FontWeight="Bold"
+            Margin="10,0,538,453"
+            IsHitTestVisible="False"
+            Foreground="Blue"/>
+        <TextBlock Text="Mã khách hàng"
+            Panel.ZIndex="2"
+            VerticalAlignment="Bottom"
+            FontSize="15"
+            FontWeight="Bold"
+            Margin="591,0,79,445"
+            IsHitTestVisible="False"
+            Foreground="Blue" Height="24"/>
+        <TextBox x:Name="txtMaKhachHang" HorizontalAlignment="Left" Height="16" Margin="720,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" TextChanged="txtMaKhachHang_TextChanged" RenderTransformOrigin="1.02,-2.438"/>
+    </Grid>
+</Page>

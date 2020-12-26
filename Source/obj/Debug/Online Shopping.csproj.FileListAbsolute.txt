@@ -1,0 +1,45 @@
+C:\Online-Shopping\Source\bin\Debug\Online Shopping.exe.config
+C:\Online-Shopping\Source\bin\Debug\Online Shopping.exe
+C:\Online-Shopping\Source\bin\Debug\Online Shopping.pdb
+C:\Online-Shopping\Source\bin\Debug\EntityFramework.dll
+C:\Online-Shopping\Source\bin\Debug\EntityFramework.SqlServer.dll
+C:\Online-Shopping\Source\bin\Debug\HandyControl.dll
+C:\Online-Shopping\Source\bin\Debug\OnlineShoppingBUS.dll
+C:\Online-Shopping\Source\bin\Debug\OnlineShoppingDAO.dll
+C:\Online-Shopping\Source\bin\Debug\OnlineShoppingBUS.pdb
+C:\Online-Shopping\Source\bin\Debug\EntityFramework.xml
+C:\Online-Shopping\Source\bin\Debug\EntityFramework.SqlServer.xml
+C:\Online-Shopping\Source\bin\Debug\HandyControl.xml
+C:\Online-Shopping\Source\bin\Debug\OnlineShoppingDAO.pdb
+C:\Online-Shopping\Source\bin\Debug\en\HandyControl.resources.dll
+C:\Online-Shopping\Source\bin\Debug\fa\HandyControl.resources.dll
+C:\Online-Shopping\Source\bin\Debug\fr\HandyControl.resources.dll
+C:\Online-Shopping\Source\bin\Debug\ko-KR\HandyControl.resources.dll
+C:\Online-Shopping\Source\bin\Debug\ru\HandyControl.resources.dll
+C:\Online-Shopping\Source\bin\Debug\tr\HandyControl.resources.dll
+C:\Online-Shopping\Source\obj\Debug\Online Shopping.csprojAssemblyReference.cache
+C:\Online-Shopping\Source\obj\Debug\AddProductWindow.g.cs
+C:\Online-Shopping\Source\obj\Debug\BasketWindow.g.cs
+C:\Online-Shopping\Source\obj\Debug\CustomerPage.g.cs
+C:\Online-Shopping\Source\obj\Debug\LoginWindow.g.cs
+C:\Online-Shopping\Source\obj\Debug\MainWindow.g.cs
+C:\Online-Shopping\Source\obj\Debug\SellerPage.g.cs
+C:\Online-Shopping\Source\obj\Debug\App.g.cs
+C:\Online-Shopping\Source\obj\Debug\Online Shopping_MarkupCompile.cache
+C:\Online-Shopping\Source\obj\Debug\Online Shopping_MarkupCompile.lref
+C:\Online-Shopping\Source\obj\Debug\App.baml
+C:\Online-Shopping\Source\obj\Debug\AddProductWindow.baml
+C:\Online-Shopping\Source\obj\Debug\BasketWindow.baml
+C:\Online-Shopping\Source\obj\Debug\CustomerPage.baml
+C:\Online-Shopping\Source\obj\Debug\LoginWindow.baml
+C:\Online-Shopping\Source\obj\Debug\MainWindow.baml
+C:\Online-Shopping\Source\obj\Debug\SellerPage.baml
+C:\Online-Shopping\Source\obj\Debug\Online Shopping.g.resources
+C:\Online-Shopping\Source\obj\Debug\Online_Shopping.Properties.Resources.resources
+C:\Online-Shopping\Source\obj\Debug\Online Shopping.csproj.GenerateResource.cache
+C:\Online-Shopping\Source\obj\Debug\Online Shopping.csproj.CoreCompileInputs.cache
+C:\Online-Shopping\Source\obj\Debug\Online Shopping.csproj.CopyComplete
+C:\Online-Shopping\Source\obj\Debug\Online Shopping.exe
+C:\Online-Shopping\Source\obj\Debug\Online Shopping.pdb
+C:\Online-Shopping\Source\obj\Debug\HistoryOrder.g.cs
+C:\Online-Shopping\Source\obj\Debug\HistoryOrder.baml
