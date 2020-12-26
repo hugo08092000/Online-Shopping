@@ -44,8 +44,10 @@ namespace Online_Shopping
             }
 
             string tenHangHoa = NameBox.Text;
+            int maHangHoa;
             float giaHangHoa;
             int loaiHangHoa;
+            int soLuong;
 
             string tmp = PriceBox.Text;
             try
@@ -68,7 +70,20 @@ namespace Online_Shopping
                 loaiHangHoa = 1;
             }
 
-            OnlineShoppingBUS.HangHoaBUS.Instance.AddProduct(tenHangHoa, giaHangHoa, loaiHangHoa);
+            tmp = AmountBox.Text;
+            try
+            {
+                soLuong = int.Parse(tmp);
+            }
+            catch
+            {
+                MessageBox.Show("Số lượng phải là số!");
+                return;
+            }
+
+            maHangHoa = OnlineShoppingBUS.HangHoaBUS.Instance.GetNumberOfProducts() + 1;
+            OnlineShoppingBUS.HangHoaBUS.Instance.AddProduct(maHangHoa, tenHangHoa, giaHangHoa, loaiHangHoa);
+            OnlineShoppingBUS.HangHoaBUS.Instance.AddProductToStorage(maHangHoa, soLuong);
             this.Close();
         }
 

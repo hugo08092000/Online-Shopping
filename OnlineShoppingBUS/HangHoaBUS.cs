@@ -84,13 +84,16 @@ namespace OnlineShoppingBUS
             return result;
         }
 
-        public void AddProduct(string tenHangHoa, float giaHangHoa, int loaiHangHoa)
+        public void AddProductToStorage(int maHangHoa, int soLuong)
         {
-            int ma = GetNumberOfProducts() + 1;
+            OnlineShoppingDAO.HangHoaDAO.Instance.AddProductToStorage(maHangHoa, soLuong);
+        }
 
-            OnlineShoppingDAO.HangHoaDAO.Instance.AddProduct(ma, tenHangHoa, giaHangHoa, loaiHangHoa);
+        public void AddProduct(int maHangHoa, string tenHangHoa, float giaHangHoa, int loaiHangHoa)
+        {
+            OnlineShoppingDAO.HangHoaDAO.Instance.AddProduct(maHangHoa, tenHangHoa, giaHangHoa, loaiHangHoa);
 
-            OnlineShoppingDAO.HangHoaDAO.Instance.AddSupplyInfo(ma);
+            OnlineShoppingDAO.HangHoaDAO.Instance.AddSupplyInfo(maHangHoa);
         }
 
         public int GetBasketID()
@@ -107,6 +110,28 @@ namespace OnlineShoppingBUS
             else
             {
                 result = int.Parse(tmpID);
+            }
+
+            return result;
+        }
+
+        public List<Product> SearchProduct(string input)
+        {
+            DataTable db;
+            db = OnlineShoppingDAO.HangHoaDAO.Instance.SearchProduct(input);
+
+            List<Product> result = new List<Product>();
+
+            foreach (DataRow row in db.Rows)
+            {
+                Product tmpProduct = new Product();
+                tmpProduct.MaHangHoa = int.Parse(row["MaHangHoa"].ToString());
+                tmpProduct.DonGia = float.Parse(row["DonGia"].ToString());
+                tmpProduct.TenLoaiHang = row["TenLoaiHang"].ToString();
+                tmpProduct.TenHangHoa = row["TenHangHoa"].ToString();
+                tmpProduct.TenDanhMuc = row["TenDanhMuc"].ToString();
+
+                result.Add(tmpProduct);
             }
 
             return result;

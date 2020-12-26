@@ -88,6 +88,16 @@ namespace OnlineShoppingDAO
             return db;
         }
 
+        public void AddProductToStorage(int maHangHoa, int soLuong)
+        {
+            string query = $"insert into ThongTinHangTon(MaHangHoa, MaKho, SoLuongTonKho) values ({maHangHoa}, 1, {soLuong})";
+
+            _conn.Open();
+            SqlCommand cmd = new SqlCommand(query, _conn);
+            cmd.ExecuteNonQuery();
+            _conn.Close();
+        }
+
         public void AddProduct(int maHangHoa, string tenHangHoa, float giaHangHoa, int loaiHangHoa)
         {
             string query = $"insert into HangHoa(MaHangHoa, TenHangHoa, MaLoaiHang, DonGia) values ({maHangHoa}, N'{tenHangHoa}', {loaiHangHoa}, {giaHangHoa})";
@@ -107,6 +117,19 @@ namespace OnlineShoppingDAO
             SqlCommand cmd = new SqlCommand(query, _conn);
             cmd.ExecuteNonQuery();
             _conn.Close();
+        }
+
+        public DataTable SearchProduct(string input)
+        {
+            DataTable db = new DataTable();
+
+            string query = "select * from HangHoa HH, LoaiHang LH, DanhMuc DM, ThongTinHangTon T " +
+                $"where HH.MaLoaiHang = LH.MaLoaiHang and LH.MaDanhMuc = DM.MaDanhMuc and T.MaHangHoa = HH.MaHangHoa and HH.TenHangHoa like N'%{input}%'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _conn);
+            adapter.Fill(db);
+
+            return db;
         }
     }
 }

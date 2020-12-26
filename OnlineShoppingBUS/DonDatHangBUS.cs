@@ -7,7 +7,7 @@ using System.Data;
 
 namespace OnlineShoppingBUS
 {
-    class DonDatHangBUS
+    public class DonDatHangBUS
     {
         private static DonDatHangBUS _instance = null;
 
@@ -24,9 +24,9 @@ namespace OnlineShoppingBUS
             }
         }
 
-        public void AddNewOrder()
+        public void AddNewOrder(int maDon, int maKhachHang, string diaChi, string SDT, string pthuc, float ship, float tongTien)
         {
-            OnlineShoppingDAO.DonDatHangDAO.Instance.AddNewOrder();
+            OnlineShoppingDAO.DonDatHangDAO.Instance.AddNewOrder(maDon, maKhachHang, diaChi, SDT, pthuc, ship, tongTien);
         }
 
         public int GetAmountOfOrders()
@@ -38,6 +38,11 @@ namespace OnlineShoppingBUS
             result = int.Parse(row["Amount"].ToString());
 
             return result;
+        }
+
+        public void AddProductToOrder(int maDon, int maHangHoa, int soLuongDat)
+        {
+            OnlineShoppingDAO.DonDatHangDAO.Instance.AddProductToOrder(maDon, maHangHoa, soLuongDat);
         }
     }
 }

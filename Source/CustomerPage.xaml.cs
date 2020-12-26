@@ -98,5 +98,22 @@ namespace Online_Shopping
                 }
             }
         }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            string keyword = SearchTextBox.Text;
+            if(keyword == "")
+            {
+                return;
+            }
+            else
+            {
+                var result =  OnlineShoppingBUS.HangHoaBUS.Instance.SearchProduct(keyword);
+                if (result.Count != 0)
+                {
+                    CustomerDataGrid.ItemsSource = result;
+                }
+            }
+        }
     }
 }

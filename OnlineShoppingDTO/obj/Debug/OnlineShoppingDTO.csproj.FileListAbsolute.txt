@@ -1,7 +1,0 @@
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\OnlineShoppingDTO\bin\Debug\OnlineShoppingDTO.dll
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\OnlineShoppingDTO\bin\Debug\OnlineShoppingDTO.pdb
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\OnlineShoppingDTO\obj\Debug\OnlineShoppingDTO.Properties.Resources.resources
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\OnlineShoppingDTO\obj\Debug\OnlineShoppingDTO.csproj.GenerateResource.cache
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\OnlineShoppingDTO\obj\Debug\OnlineShoppingDTO.csproj.CoreCompileInputs.cache
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\OnlineShoppingDTO\obj\Debug\OnlineShoppingDTO.dll
-C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 3 - HKI\CSDL NC\Do an TH2 - Tiki\App\Online Shopping\OnlineShoppingDTO\obj\Debug\OnlineShoppingDTO.pdb

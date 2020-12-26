@@ -56,13 +56,65 @@ namespace Online_Shopping
             }
 
             BasketDataGrid.ItemsSource = basketList;
+            CalculateTotal();
         }
 
         private void RemoveButton_Click(object sender, RoutedEventArgs e)
         {
             OnlineShoppingBUS.ProductInBasket item = (OnlineShoppingBUS.ProductInBasket)BasketDataGrid.SelectedItem;
-            EventPassProduct(item.MaHangHoa);
-            basketList.Remove(item);
+            if (item == null)
+            {
+                return;
+            }
+            else
+            {
+                EventPassProduct(item.MaHangHoa);
+                basketList.Remove(item);
+                CalculateTotal();
+            }
+        }
+
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(basketList.Count == 0)
+            {
+                return;
+            }
+            else
+            {
+                int maDon = OnlineShoppingBUS.DonDatHangBUS.Instance.GetAmountOfOrders() + 1;
+                float tongTien = CalculateTotal();
+                OnlineShoppingBUS.DonDatHangBUS.Instance.AddNewOrder(maDon, 1, "467 East Rocky Cowley Road", "0342480476", "COD", 15000, tongTien);
+
+                foreach (var item in basketList)
+                {
+                    OnlineShoppingBUS.DonDatHangBUS.Instance.AddProductToOrder(maDon, item.MaHangHoa, item.SoLuongDat);
+                }
+                MessageBox.Show("Đặt hàng thành công!");
+                ClearBasket();
+                this.Close();
+            }
+        }
+
+        public float CalculateTotal()
+        {
+            float total = 0;
+            foreach (var item in basketList)
+            {
+                total += item.TongTien;
+            }
+
+            TotalMoneyTextBox.Text = total.ToString();
+            return total;
+        }
+
+        public void ClearBasket()
+        {
+            while (basketList.Count > 0)
+            {
+                EventPassProduct(basketList[0].MaHangHoa);
+                basketList.Remove(basketList[0]);
+            }
         }
     }
 }

@@ -38,7 +38,7 @@
                     Height="30"
                     Style="{StaticResource ButtonPrimary}"
                     hc:BorderElement.CornerRadius="15"
-                    HorizontalAlignment="Right"/>
+                    HorizontalAlignment="Right" Click="SearchButton_Click"/>
         </Grid>
 
         <StackPanel Orientation="Horizontal" 

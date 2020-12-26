@@ -25,9 +25,15 @@ namespace OnlineShoppingDAO
             }
         }
 
-        public void AddNewOrder()
+        public void AddNewOrder(int maDon, int maKhachHang, string diaChi, string SDT, string pthuc, float ship, float tongTien)
         {
-            throw new NotImplementedException();
+            string query = $"insert into DonDatHang(MaDon, MaKhachHang, DiaChi_KH, SDT_KH, PhuongThucThanhToan, TinhTrangDonHang, TienShip, TongTien) " +
+                           $"values ({maDon}, {maKhachHang}, N'{diaChi}', '{SDT}', 'COD', 'W', {ship}, {tongTien})";
+
+            _conn.Open();
+            SqlCommand cmd = new SqlCommand(query, _conn);
+            cmd.ExecuteNonQuery();
+            _conn.Close();
         }
 
         public DataTable GetAmountOfOrders()
@@ -40,6 +46,16 @@ namespace OnlineShoppingDAO
             adapter.Fill(db);
 
             return db;
+        }
+
+        public void AddProductToOrder(int maDon, int maHangHoa, int soLuongDat)
+        {
+            string query = $"insert into ThongTinDatHang(MaHangHoa, MaDon, SoLuongDat) values({maHangHoa}, {maDon}, {soLuongDat})";
+
+            _conn.Open();
+            SqlCommand cmd = new SqlCommand(query, _conn);
+            cmd.ExecuteNonQuery();
+            _conn.Close();
         }
     }
 }
